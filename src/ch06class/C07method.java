@@ -9,12 +9,12 @@ public class C07method {
         o2.myMethod1();
         System.out.println("------------------------");
 
-        // 줄맞춤 ctrl + clt + l
+        // 줄맞춤 ctrl + alt + l
         o1.name = "java";
         o2.name = "spring";
 
-        o1.printName();
-        o2.printName();
+        o1.printName();     // java
+        o2.printName();     // spring
         System.out.println("------------------------");
 
     }
@@ -23,7 +23,6 @@ public class C07method {
 class MyClass07 {
     //field
     String name;
-
 
     //method
     void printName() {
