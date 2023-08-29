@@ -1,4 +1,4 @@
-package ch07extends.book.sec04.exam01.exam02;
+package ch07extends.book.sec04.exam02;
 
 public class SupersonicAirplane extends Airplane{
     public static final int NOMAL = 1;

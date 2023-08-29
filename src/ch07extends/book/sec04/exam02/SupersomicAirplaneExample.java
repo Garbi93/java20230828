@@ -1,4 +1,4 @@
-package ch07extends.book.sec04.exam01.exam02;
+package ch07extends.book.sec04.exam02;
 
 public class SupersomicAirplaneExample {
     public static void main(String[] args) {
