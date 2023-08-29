@@ -23,7 +23,7 @@ class MyClass09 {
     static void printModel () {
         // static member 끼리 접근 가능
         System.out.println("model = " + model);
-        // static mamber 에서 instance member에 는 접근 불가능
+        // static member 에서 instance member에 는 접근 불가능
         //System.out.println("name = " + name);
     }
 }
