@@ -10,7 +10,6 @@ class MyClass10 {
     // 대신 관련된 메소드 (getter, setter) 메소드 를public으로 사용한다
 
 
-
     //------------------------------------------------------
     // get 메소드
     public int getAge() {
