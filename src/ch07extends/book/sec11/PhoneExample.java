@@ -7,5 +7,7 @@ public class PhoneExample {
         smartPhone.turnOn();
         smartPhone.internetSearch();
         smartPhone.turnOff();
+
+
     }
 }

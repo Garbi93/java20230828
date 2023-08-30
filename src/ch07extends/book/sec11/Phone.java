@@ -1,6 +1,6 @@
 package ch07extends.book.sec11;
 
-public class Phone {
+public abstract class Phone {   // 추상화
     String owner;
 
     Phone(String owner) {
