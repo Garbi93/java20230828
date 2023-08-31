@@ -8,19 +8,26 @@ public class DaoExample {
         dao.delete();
     }
 
+
+
     public static void main(String[] args) {
         dbWork(new OracleDao());
         dbWork(new MySqlDao());
     }
+
 }
 
-interface DataAccessObject{
+interface DataAccessObject {
     public void select();
+
     public void insert();
+
     public void update();
+
     public void delete();
 }
-class OracleDao implements DataAccessObject{
+
+class OracleDao implements DataAccessObject {
     @Override
     public void select() {
         System.out.println("오라클 선택");
@@ -42,7 +49,7 @@ class OracleDao implements DataAccessObject{
     }
 }
 
-class MySqlDao implements DataAccessObject{
+class MySqlDao implements DataAccessObject {
     @Override
     public void select() {
         System.out.println("MySql 선택");
