@@ -17,6 +17,7 @@ public class DaoExample {
 
 }
 
+
 interface DataAccessObject {
     public void select();
 
