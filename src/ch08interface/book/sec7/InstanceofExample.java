@@ -14,6 +14,10 @@ public class InstanceofExample {
         if(vehicle instanceof Bus bus) {
             bus.checkFace();
         }
+        // 위에서 아래로 개선됨
+        if(vehicle instanceof Bus bus) {
+
+        }
 
         vehicle.run();
     }
