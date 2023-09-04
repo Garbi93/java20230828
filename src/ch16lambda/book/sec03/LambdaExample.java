@@ -12,10 +12,19 @@ public class LambdaExample {
             System.out.println(name + "이 " + job + "을 하지 않습니다.");
         });
 
-        person.action2(word -> {
-            System.out.print("\"" + word + "\"");
+        person.action2(content -> {
+            System.out.print("\"" + content + "\"");
             System.out.println("라고 말합니다");
         });
-        person.action2(word -> System.out.println("\"" + word + "\"라고 외칩니다."));
+        person.action2(content -> System.out.println("\"" + content + "\"라고 외칩니다."));
+    }
+}
+
+
+class MySpeakable implements Speakable {
+
+    @Override
+    public void speak(String c) {
+        System.out.println(c + "라고 외칩니다.");
     }
 }
