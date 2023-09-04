@@ -11,6 +11,12 @@ public class LambdaExample {
 
         person.action((x , y)->(x/y));
 
+        person.action(new Calcuable() {
+            @Override
+            public double calc(double x, double y) {
+                return sum(x, y);
+            }
+        });
         person.action((x,y)->sum(x,y));
     }
 
