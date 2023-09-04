@@ -19,5 +19,7 @@ public class Example {
 
         int min = maxOrMin((x,y)-> Math.min(x,y));
         System.out.println("최소값 = " + min);
+
+
     }
 }
