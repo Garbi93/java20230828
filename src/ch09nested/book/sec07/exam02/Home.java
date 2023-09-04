@@ -23,7 +23,7 @@ public class Home {
         RemoteControl rc =new RemoteControl() {
             @Override
             public void turnOn() {
-                System.out.println("에어컨으 켭니다.");
+                System.out.println("에어컨을 켭니다.");
             }
 
             @Override
