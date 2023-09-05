@@ -1,6 +1,6 @@
 package ch12api.lecture;
 
-public class C12substring {
+public class C13substring {
     public static void main(String[] args) {
         // substring : 부분 문자열 추출
         String a = "spring";
