@@ -14,7 +14,6 @@ public class C09methodReference {
 
 class MyClass09 {
     void someMethod(int a) {
-
     }
 }
 
