@@ -10,6 +10,7 @@ public class C04getterSetter {
 
         System.out.println(o1.getName());
         System.out.println(o1.getAge());
+        System.out.println(o1.toString());
     }
 }
 
@@ -32,5 +33,13 @@ class MyClass04 {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "MyClass04{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
