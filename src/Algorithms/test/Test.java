@@ -1,27 +1,29 @@
 package Algorithms.test;
-
 import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        int max = arr[0];
-        int min = arr[0];
-        for(int i = 0; i<n; i++) {
-            arr[i] = sc.nextInt();
+        int n = 9;
+        int[] a = new int[n];
+        int max =a[0];
+        int count =1;
+        for(int i=0; i< n; i++) {
+            a[i] = sc.nextInt();
         }
-        System.out.println(arr[0]);
-        for(int i = 0; i<n; i++) {
-            if(max < arr[i]){
-                max = arr[i];
+        for(int i =0; i<n; i++) {
+            if(max < a[i]) {
+                max = a[i];
             }
-            if(min > arr[i]) {
-                min = arr[i];
-            }
-
         }
-        System.out.println(max + " " + min);
+        for(int i =0; i< n; i++){
+            if(max != a[i]){
+                count++;
+            }else {
+                break;
+            }
+        }
+        System.out.println(max);
+        System.out.println(count-1);
     }
 }

@@ -7,12 +7,7 @@ public class MethodReferenceExample {
         // 람다식
         // person.action((x,y)->Computer.staticMethod(x,y));
         // 메소드 참조 방식
-        person.action(new Calcuable() {
-            @Override
-            public double calc(double x, double y) {
-                return Computer.staticMethod(x, y);
-            }
-        });
+        person.action(Computer::staticMethod);
 
 
         // 인스턴스 메소드일 경우
