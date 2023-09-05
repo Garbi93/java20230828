@@ -11,6 +11,8 @@ public class StringExample {
         String name4 = new String("홍길동");
         System.out.println(System.identityHashCode(name3));
         System.out.println(System.identityHashCode(name4));
+
+        System.out.println(args.length);
     }
 }
 
