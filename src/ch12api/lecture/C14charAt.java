@@ -1,4 +1,4 @@
-package ch16lambda.lecture;
+package ch12api.lecture;
 
 public class C14charAt {
     public static void main(String[] args) {
