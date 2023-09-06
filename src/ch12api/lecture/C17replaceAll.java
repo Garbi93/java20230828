@@ -11,5 +11,10 @@ public class C17replaceAll {
         String r2 = a.replaceAll("(java|JAVA)", "python");
         System.out.println(r2);
         // 두 값을 한번에 패턴화 시켜서 변경
+
+        String str = "zipXzap";
+        String pattern = "z.p";
+        System.out.println(str.replaceAll(pattern,"zp"));
+
     }
 }
