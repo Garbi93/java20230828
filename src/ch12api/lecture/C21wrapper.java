@@ -15,5 +15,19 @@ public class C21wrapper {
         //int p = o; //이건 불가능 하다
         Integer q = (Integer) o;    // 위험한 코드
         int r = q;
+
+        int s = 30; // 4 byte
+        long t =s;  // 8 byte
+
+        Integer u = 300;
+        // Long v = u; //x
+
+        float w = 3.14f;
+        double x = w;
+
+        Float y = 3.14f;
+        //Double z = y;   // 참조 Float 는 참조 Double 에 들어갈 수 없다
+
+
     }
 }
