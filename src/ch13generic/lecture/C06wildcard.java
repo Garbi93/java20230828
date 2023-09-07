@@ -31,6 +31,8 @@ public class C06wildcard {
         //Animal oo = new Dog();
         o5.set(new Cat());
 
+        // super 를 썻을때는 get은 안전하지 않고 set 은 안전하다     out 안전
+        // extends를 썻을 때는 set은 안전하지 않고 get은 안전하다.   in  안전
 
 
     }
