@@ -40,7 +40,10 @@ public class ArrayListExample {
         for(Board b : list) {
             System.out.println(b.getSubject() + "\t" + b.getContent() + "\t" + b.getWriter());
         }
-        list.forEach(System.out::println);
+        System.out.println();
+
+        // forEach
+        list.forEach(x -> System.out.println(x.getSubject() + "\t" + x.getContent() + "\t" + x.getWriter()));
     }
 
 }

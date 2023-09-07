@@ -14,19 +14,19 @@ public class C03contains {
         System.out.println("c1 = " + c1);   // true ? 인 이유
 
 
-        List<MyClas03> list2 = new ArrayList<>();
-        list2.add(new MyClas03("흥민"));
-        list2.add(new MyClas03("강인"));
+        List<MyClass03> list2 = new ArrayList<>();
+        list2.add(new MyClass03("흥민"));
+        list2.add(new MyClass03("강인"));
 
-        boolean c2 = list2.contains(new MyClas03("흥민"));
-        System.out.println("c2 = " + c2);   // false?인 이유 -> equals hashcode메소드를 재정의 해야  true를 출력한다.
+        boolean c2 = list2.contains(new MyClass03("흥민"));
+        System.out.println("c2 = " + c2);   // false?인 이유 -> [equals hashcode]메소드를 재정의 해야  true를 출력한다.
     }
 }
 
-class MyClas03 {
+class MyClass03 {
     private String name;
 
-    public MyClas03(String name) {
+    public MyClass03(String name) {
         this.name = name;
     }
 
@@ -43,9 +43,9 @@ class MyClas03 {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        MyClas03 myClas03 = (MyClas03) o;
+        MyClass03 myClass03 = (MyClass03) o;
 
-        return Objects.equals(name, myClas03.name);
+        return Objects.equals(name, myClass03.name);
     }
 
     @Override
