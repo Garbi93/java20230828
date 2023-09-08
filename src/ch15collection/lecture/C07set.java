@@ -1,4 +1,4 @@
-package ch15collection;
+package ch15collection.lecture;
 
 import java.util.HashSet;
 import java.util.Set;
