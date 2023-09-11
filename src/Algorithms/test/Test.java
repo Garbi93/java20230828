@@ -1,12 +1,9 @@
 package Algorithms.test;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String s = sc.next();
+        ArrayList<String> A1 = new ArrayList<>();
 
-        System.out.println(s.length());
     }
 }
