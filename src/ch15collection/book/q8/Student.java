@@ -25,4 +25,12 @@ public class Student {
     public int hashCode() {
         return studentNum;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentNum=" + studentNum +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
