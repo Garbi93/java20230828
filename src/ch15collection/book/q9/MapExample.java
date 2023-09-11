@@ -28,7 +28,7 @@ public class MapExample {
 
         }
         System.out.println();
-        System.out.println("평균 점수 : "+totalScore/3);
+        System.out.println("평균 점수 : "+totalScore/map.size());
         System.out.println("최고 점수 : "+maxScore);
         System.out.println("최고 점수 받은 아이디 : "+ maxId);
     }
