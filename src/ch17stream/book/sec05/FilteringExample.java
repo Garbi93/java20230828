@@ -24,7 +24,7 @@ public class FilteringExample {
                 .forEach(System.out::println);
         System.out.println();
 
-        // 그다음 신으로 시작하는 이름
+        // 중복 제거하고 신으로 시작하는 이름
         list.stream()
                 .distinct()
                 .filter(n->n.startsWith("신"))
