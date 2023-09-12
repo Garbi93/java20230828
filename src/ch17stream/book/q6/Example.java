@@ -1,5 +1,6 @@
 package ch17stream.book.q6;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,6 +12,9 @@ public class Example {
                 new Member("신용권", 40),
                 new Member("감자바", 26)
         );
+
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(1);
 
         System.out.println("나이들만 출력");
         list.stream()
