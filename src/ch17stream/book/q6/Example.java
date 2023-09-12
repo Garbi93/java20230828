@@ -12,9 +12,32 @@ public class Example {
                 new Member("감자바", 26)
         );
 
+        System.out.println("나이들만 출력");
         list.stream()
                 .map(x-> x.getAge())
                 .forEach(System.out::println);
+        System.out.println();
+
+        System.out.println("나이들의 합 구해서 출력");
+        Integer result = list.stream()
+                .map(x -> x.getAge())
+                .reduce(0, (x, y) -> x + y);
+        System.out.println("나이 합은 : "+ result);
+        System.out.println("나이 평균 은 : "+ result/list.size());
+        System.out.println();
+        //
+        System.out.println("가장 많은 나이 구해서 출력 reduce");
+        Integer maxAge = list.stream()
+                .map(x -> x.getAge())
+                .reduce(Integer.MIN_VALUE, (x, y) -> Math.max(x, y));
+        System.out.println("가장 나이 많은 사람의 나이 : "+ maxAge);
+        System.out.println();
+        //
+        System.out.println("가장 작은 나이 구해서 출력 reduce");
+        Integer minAge = list.stream()
+                .map(x -> x.getAge())
+                .reduce(Integer.MAX_VALUE, (x, y) -> Math.min(x, y));
+        System.out.println("가장 나이 적은 사람의 나이 : " + minAge);
     }
 }
 
