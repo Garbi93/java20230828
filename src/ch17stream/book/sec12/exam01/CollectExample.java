@@ -24,7 +24,7 @@ public class CollectExample {
 
         System.out.println();
 
-        System.out.println("모든 사람들의 이름과 나이를 키벨류 값으로 불러오기");
+        System.out.println("모든 사람들의 이름과 점수를 키벨류 값으로 불러오기");
         Map<String, Integer> map = totalList.stream()
                 .collect(
                         Collectors.toMap(

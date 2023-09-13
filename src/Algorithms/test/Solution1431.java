@@ -1,12 +1,14 @@
 package Algorithms.test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Solution1431 {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-        List<Boolean> list = new ArrayList<>();
+        //List<Boolean> list = new ArrayList<>();
 
+        /*
         // 배열에서 최대값 구하기 [2, 3, 5, 1, 3]
         int max = 0;
         for (int candy : candies) {
@@ -23,8 +25,17 @@ public class Solution1431 {
         for (int candy : candies) {
             list.add((candy + extraCandies) >= max);
         }
+         */
+
+        int max = Arrays.stream(candies)
+                .max()
+                .getAsInt();
+        List<Boolean> result = Arrays.stream(candies)
+                .map(c -> c + extraCandies)
+                .mapToObj(c -> c >= max)
+                .toList();
 
 
-        return list;
+        return result;
     }
 }
