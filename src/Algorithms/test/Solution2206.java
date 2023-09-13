@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Solution2206 {
     public boolean divideArray(int[] nums) {
@@ -13,7 +14,7 @@ public class Solution2206 {
 
         //[3,2] -> true
         //[2,4] -> true
-        /*
+
         Map<Integer, Integer> map = new HashMap<>();
         for(int num : nums) {
             if(map.containsKey(num)) {
@@ -34,15 +35,15 @@ public class Solution2206 {
             }
         }
         return result;
-         */
-//        Arrays.stream(nums)
+
+//        Stream<Map.Entry<Integer, Long>> entryStream = Arrays.stream(nums)
 //                .boxed()
-//                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
+//                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
 //                .entrySet()
 //                .stream()
-//                .filter(e->e.getValue()>2)
-//                .mapToInt(Integer:)
-//
-        return false;
+//                .filter(e -> e.getValue() > 2);
+//        System.out.println(entryStream.map(e->e.getValue()));
+
+//        return false;
     }
 }
