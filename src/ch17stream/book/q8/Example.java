@@ -13,6 +13,17 @@ public class Example {
                 new Member("신용권", "개발자")
         );
 
+        Map<String, List<Member>> groupingMap = list.stream()
+                        .collect(Collectors.groupingBy(x -> x.getJob()));
+
+        System.out.println("[개발자]");
+        groupingMap.get("개발자").forEach(System.out::println);
+
+        System.out.println("[디자이너]");
+        groupingMap.get("디자이너").forEach(System.out::println);
+
+
+
         System.out.println("[개발자]");
         List<Member> result1 = list.stream()
                 .filter(x -> x.getJob().equals("개발자"))
@@ -41,9 +52,7 @@ class Member {
 
     @Override
     public String toString() {
-        return "Member{" +
-                "name='" + name + '\'' +
-                ", job='" + job + '\'' +
-                '}';
+        return  "name : " + name +
+                ", job : " + job  ;
     }
 }
