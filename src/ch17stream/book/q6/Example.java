@@ -42,6 +42,13 @@ public class Example {
                 .map(x -> x.getAge())
                 .reduce(Integer.MAX_VALUE, (x, y) -> Math.min(x, y));
         System.out.println("가장 나이 적은 사람의 나이 : " + minAge);
+
+        //평균구하기 참조타입 stream -> 기본타입stream으로 변경
+        double avg = list.stream()
+                .mapToInt(Member::getAge)
+                .average()
+                .getAsDouble();
+        System.out.println("avg = " + (int)avg);
     }
 }
 
