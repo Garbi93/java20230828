@@ -1,7 +1,10 @@
 package Algorithms.test;
 
-import java.util.HashMap;
-import java.util.Map;
+import ch16lambda.book.q6.Funtion;
+
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Solution1512 {
     public int numIdenticalPairs(int[] nums) {
@@ -10,7 +13,7 @@ public class Solution1512 {
         // [1, 3] : 1+2
         // [2, 1] : 0
         // [3, 2] : 1
-
+        /*
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int num : nums) {
@@ -30,7 +33,15 @@ public class Solution1512 {
             int midSum = (value) * (value - 1) / 2;
             sum += midSum;
         }
+        */
 
-        return sum;
+        return Arrays.stream(nums)
+                .boxed()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .values().stream()
+                .map(n -> (n) * (n - 1) / 2)
+                .mapToInt(n -> n.intValue())
+                .sum();
+
     }
 }

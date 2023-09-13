@@ -1,12 +1,12 @@
 package Algorithms.test;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Solution1748 {
     public int sumOfUnique(int[] nums) {
+        /*
         Map<Integer, Integer> map = new HashMap<>();
 
         for(int num : nums) {
@@ -31,5 +31,17 @@ public class Solution1748 {
         }
         System.out.println(map);
         return sum;
+
+         */
+        return Arrays.stream(nums)
+                .boxed()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet()
+                .stream()
+                .filter(e -> e.getValue() == 1)
+                .map(e-> e.getKey())
+                .mapToInt(Integer::intValue)
+                .sum();
+
     }
 }
