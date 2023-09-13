@@ -18,7 +18,7 @@ public class CollectExample {
         totalList.add(new Student("오해영", "여", 93));
 
         Map<String, Double> map = totalList.stream()
-                .collect(groupingBy(Student::getSex, averagingDouble(Student::getScore)));
+                .collect(groupingBy(s -> s.getSex(), averagingDouble(s -> s.getScore())));
         System.out.println(map);
 
     }
