@@ -11,4 +11,11 @@ public class C23custom {
 
 class LackOfMoneyException extends RuntimeException {
 
+    public LackOfMoneyException() {
+
+    }
+
+    public LackOfMoneyException(String message) {
+        super(message);
+    }
 }
