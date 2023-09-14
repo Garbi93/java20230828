@@ -4,17 +4,19 @@ import java.util.*;
 public class Test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[10];
-        int[] pare = new int[10];
-        for(int a: arr) {
-            a = sc.nextInt();
+        // n 은 총 바구니 수
+        // m 은 바구니를 역순으로 만들 횟수
+        int m = sc.nextInt();
+        int n = sc.nextInt();
+        int[] arrM = new int[n];
+        int revers = 0;
+        for(int I = 0; I < n; I++){
+            arrM[I] = I+1;
         }
-        for(int p: pare) {
-            p = arr[p]%42;
-        }
-        for(int i = 0; i< 10; i++) {
-            System.out.println(arr[i]);
-            System.out.println(pare[i]);
+        for(int I=0; I< m; I++) {
+            int i =sc.nextInt();
+            int j = sc.nextInt();
+            //revers = arrM[]
         }
     }
 }
