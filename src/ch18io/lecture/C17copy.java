@@ -7,7 +7,7 @@ public class C17copy {
         String src = "src/ch18io/lecture/C17copy.java";
         String des = "C:/Temp/C17copy.java";
 
-
+        // 중간에 한글이 있어도 읽기 가능
         try {
             InputStream is = new FileInputStream(src);
             OutputStream os = new FileOutputStream(des);
