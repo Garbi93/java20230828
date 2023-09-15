@@ -1,16 +1,15 @@
-package ch18io.book.sec02.exam02;
+package ch18io.book.sec02.exam03;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
 public class WriteExample {
-    // 배열의 전부를 쓰는것
     public static void main(String[] args) {
-        String path = "C:/Temp/text1.db";
+        String path = "C:/Temp/test3.db";
         try (OutputStream os = new FileOutputStream(path)) {
-            byte[] array = {10, 20, 30};
-            os.write(array);
+            byte[] array = {10, 20, 30, 40, 50};
+            os.write(array, 1,3);
             os.flush();
         } catch (IOException e) {
             e.printStackTrace();
