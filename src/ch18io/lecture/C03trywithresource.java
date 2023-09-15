@@ -71,7 +71,7 @@ public class C03trywithresource {
             FileInputStream fio = new FileInputStream("");
             FileOutputStream fos = new FileOutputStream("");
 
-            try (fio; fos;) {
+            try (fio; fos) {
                 fio.read();
                 fos.write(33);
             }catch (IOException e) {
@@ -88,6 +88,8 @@ public class C03trywithresource {
         FileOutputStream fos = new FileOutputStream("");
         FileInputStream fis = new FileInputStream("");
 
+        // 이런식으로 작성하면 write에서 익셉션이 발생하면 아래의 close의 코드가 실행을 안하고 throws로 바로 넘어가기 때문에
+        // 이런방식은 권장되지 않는다.
         fos.write(33);
         fis.read();
 
