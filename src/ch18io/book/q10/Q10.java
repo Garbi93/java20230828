@@ -1,14 +1,16 @@
 package ch18io.book.q10;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class Q10 {
     public static void main(String[] args) {
+        /*
         try{
             String path = "C:/Temp/photo1.jpg";
             File file = new File(path);
-
             String dec = "C:/Temp/photo2.jpg";
+
 
 
             System.out.printf("원본 파일 경로: %s%n",path);
@@ -29,5 +31,20 @@ public class Q10 {
             e.printStackTrace();
         }
 
+         */
+
+        // 선생님 버젼
+        String srcPath = "";
+        String desPath = "";
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("원본 파일 경로 : ");
+        srcPath = sc.nextLine();
+
+        System.out.print("복사 파일 경로 : ");
+        desPath = sc.nextLine();
+
+
+        // 다시한번 풀어보기
     }
 }
