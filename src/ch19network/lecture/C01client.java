@@ -14,7 +14,7 @@ public class C01client {
             try (socket; writer; bw){
                 bw.write("안녕하세요!!!");
             }
-
+//
         }catch (Exception e) {
             e.printStackTrace();
         }

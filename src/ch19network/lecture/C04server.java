@@ -19,7 +19,7 @@ public class C04server {
             try(serverSocket; socket; os; osw; bw ) {
                 bw.write("안녕하세요 클라이언트 😊");
             }
-
+//
         }catch (Exception e ) {
             e.printStackTrace();
         }
