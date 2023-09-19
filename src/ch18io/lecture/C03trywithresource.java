@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class C03trywithresource {
     public void method1 () {
-        // 익셉션이 발생하나 안하나 이므로 final 에서 os.clost 를 해주자
+        // 익셉션이 발생하나 안하나 이므로 final 에서 os.close 를 해주자
         OutputStream os = null;
         try {
             os = new FileOutputStream("");

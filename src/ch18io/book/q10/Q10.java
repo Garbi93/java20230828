@@ -33,7 +33,7 @@ public class Q10 {
 
          */
 
-        // 선생님 버젼
+        //
         String srcPath = "";
         String desPath = "";
 
