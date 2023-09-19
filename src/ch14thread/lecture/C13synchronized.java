@@ -1,6 +1,7 @@
 package ch14thread.lecture;
 
 public class C13synchronized {
+    // 씽크로나이즈드 블럭 이용방법
     public static void main(String[] args) throws InterruptedException {
         MyBox box = new MyBox(0);
         Thread t1 = new Thread(new Task(box));
