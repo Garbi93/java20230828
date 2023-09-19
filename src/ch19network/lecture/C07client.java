@@ -28,7 +28,6 @@ public class C07client {
                 System.out.println(" 클라이언트가 파일을 다 받음 ~~👍(❁´◡`❁)");
             }
 
-
         }catch (Exception e) {
             e.printStackTrace();
         }
