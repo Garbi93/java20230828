@@ -6,33 +6,58 @@ import java.net.Socket;
 
 public class C08server {
     public static void main(String[] args) {
-        // server 가 client에게 파일 보내기
-        try{
-            ServerSocket serverSocket = new ServerSocket(5000);
-            Socket socket = serverSocket.accept();
+        // server가 client에게 파일 보내기
+        ServerSocket serverSocket = null;
+        try {
 
-            String path = "C:/Temp/test1.jpg";
-            InputStream is = new FileInputStream(path);
-            BufferedInputStream bis = new BufferedInputStream(is);
+            serverSocket = new ServerSocket(5000);
 
-            OutputStream os = socket.getOutputStream();
-            BufferedOutputStream bos =new BufferedOutputStream(os);
+            for (int i = 0; i < 30; i++) {
+                Socket socket = serverSocket.accept();
 
-            try(serverSocket; socket; is;bis;os;bos) {
-                byte[] bytes = new byte[1024];
-                int len = 0;
-                while ((len = bis.read(bytes))!=-1) {
-                    bos.write(bytes,0,len);
-                }
+                Thread t = new Thread(() -> {
+                    try {
 
-                bos.flush();
+                        String path = "C:/Temp/test.jpg";
+                        InputStream is = new FileInputStream(path);
+                        BufferedInputStream bis = new BufferedInputStream(is);
 
-                System.out.println("서버가 파일을 보냈습니다.╰(*°▽°*)╯");
+                        OutputStream os = socket.getOutputStream();
+                        BufferedOutputStream bos = new BufferedOutputStream(os);
 
+                        try (bos; os; bis; is;) {
+
+                            byte[] bytes = new byte[1024];
+                            int len = 0;
+
+                            while ((len = bis.read(bytes)) != -1) {
+                                bos.write(bytes, 0, len);
+                            }
+                            bos.flush();
+
+                            System.out.println("서버가 파일을 보냈습니다 😜");
+                        }
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    } finally {
+                        try {
+                            socket.close();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                });
+                t.start();
             }
-
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            try {
+                serverSocket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
